@@ -1313,16 +1313,21 @@ body {
   text-shadow: 0 0 8px rgba(0, 100, 150, 0.2);
 }
 
-/* Typing Effect */
+/* Simplified Typing Effect */
 .typing-effect .paragraph {
-  overflow: hidden;
-  white-space: pre-wrap;
-  border-right: 2px solid transparent;
+  opacity: 0;
 }
 
 .typing-effect .paragraph.visible {
-  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  animation-delay: var(--delay, 0s);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transition-delay: var(--delay, 0s);
+  position: relative;
+}
+
+.typing-effect .paragraph.visible::after {
+  content: '';
+  display: none; /* Disable the problematic animation */
 }
 
 .no-typing-effect .paragraph {
@@ -1335,12 +1340,6 @@ body {
   transition-delay: var(--delay, 0s);
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--accent-primary) }
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
