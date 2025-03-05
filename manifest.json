@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Whispers",
+  "name": "Whispers in the Dark",
+  "description": "A gothic horror text-based adventure where your choices determine your fate.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0e0e12",
+  "background_color": "#0e0e12"
 }
