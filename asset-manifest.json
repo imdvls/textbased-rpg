@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/textbased-rpg/static/css/main.19484871.css",
+    "main.css": "/textbased-rpg/static/css/main.173a49c8.css",
     "main.js": "/textbased-rpg/static/js/main.2d227106.js",
     "static/js/453.50f07c53.chunk.js": "/textbased-rpg/static/js/453.50f07c53.chunk.js",
     "index.html": "/textbased-rpg/index.html",
-    "main.19484871.css.map": "/textbased-rpg/static/css/main.19484871.css.map",
+    "main.173a49c8.css.map": "/textbased-rpg/static/css/main.173a49c8.css.map",
     "main.2d227106.js.map": "/textbased-rpg/static/js/main.2d227106.js.map",
     "453.50f07c53.chunk.js.map": "/textbased-rpg/static/js/453.50f07c53.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19484871.css",
+    "static/css/main.173a49c8.css",
     "static/js/main.2d227106.js"
   ]
 }
