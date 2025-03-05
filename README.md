@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Whispers in the Dark
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Gothic Horror Adventure](https://img.shields.io/badge/Genre-Gothic%20Horror-8A0707)
+![React](https://img.shields.io/badge/Built%20with-React-61DAFB)
+![Text Adventure](https://img.shields.io/badge/Type-Text%20Adventure-333333)
 
-## Available Scripts
+A haunting text-based adventure game where your choices determine your fate. Explore a decrepit mansion filled with supernatural horrors, manage your dwindling resources, and fight to maintain your sanity as you uncover the dark secrets hidden within its walls.
 
-In the project directory, you can run:
+## 🕯️ Play Now
 
-### `npm start`
+[**Enter the Mansion**](https://imdvls.github.io/textbased-rpg/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏚️ About the Game
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*Whispers in the Dark* is an atmospheric gothic horror text adventure that combines resource management, enemy encounters, and branching narratives. As you explore the haunted mansion, you'll:
 
-### `npm test`
+- **Make critical choices** that affect your path through the story
+- **Manage your health and sanity** as supernatural forces work against you
+- **Collect items** to solve puzzles and defend yourself
+- **Encounter terrifying entities** that you must confront or flee from
+- **Uncover the dark history** of the mansion and its former inhabitants
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🕯️ Features
 
-### `npm run build`
+- **Atmospheric Storytelling**: Immersive gothic horror narrative with rich, descriptive text
+- **Dynamic Encounters**: Face supernatural entities with multiple ways to overcome them
+- **Resource Management**: Balance your health and sanity as you explore
+- **Inventory System**: Collect and use items to progress through the story
+- **Multiple Endings**: Your choices lead to different conclusions to your nightmare
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥️ Technical Details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This game is built with:
+- React 18
+- Modern CSS with atmospheric effects
+- Responsive design for various screen sizes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎮 How to Play
 
-### `npm run eject`
+1. Read the atmospheric text describing your surroundings
+2. Choose from the available options to progress
+3. Manage your health and sanity carefully
+4. Collect items to help in your journey
+5. When encountering enemies, choose whether to confront them or attempt to flee
+6. Try to escape the mansion with your life and sanity intact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Development
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Local Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone the repository
+git clone https://github.com/imdvls/textbased-rpg.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Navigate to the project directory
+cd textbased-rpg
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Start the development server
+npm start
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+# Build and deploy to GitHub Pages
+npm run deploy
+```
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Inspired by classic text adventures and gothic horror literature
+- Special thanks to all the beta testers who helped refine the experience
+
+---
+
+*"In the mansion's shadowed halls, whispers echo from the walls. Will you find the truth that's hidden, or join the souls who are forbidden?"*

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 function Scene({ scene, onSelectOption, onReset, encounterActive, encounterOutcome }) {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
+  const [typingEffect, setTypingEffect] = useState(true);
   
   useEffect(() => {
     // Reset animations when scene changes
@@ -24,6 +25,11 @@ function Scene({ scene, onSelectOption, onReset, encounterActive, encounterOutco
     };
   }, [scene]);
 
+  // Toggle typing effect
+  const handleToggleTypingEffect = () => {
+    setTypingEffect(!typingEffect);
+  };
+
   // Debug function to log option clicks
   const handleOptionClick = (option) => {
     console.log("Option clicked:", option);
@@ -34,7 +40,33 @@ function Scene({ scene, onSelectOption, onReset, encounterActive, encounterOutco
   };
 
   if (!scene) {
-    return <div className="scene"><div className="loading-text">The darkness stirs...</div></div>;
+    return (
+      <div className="scene">
+        <div className="loading-text">
+          <span className="loading-letter">T</span>
+          <span className="loading-letter">h</span>
+          <span className="loading-letter">e</span>
+          <span className="loading-letter"> </span>
+          <span className="loading-letter">d</span>
+          <span className="loading-letter">a</span>
+          <span className="loading-letter">r</span>
+          <span className="loading-letter">k</span>
+          <span className="loading-letter">n</span>
+          <span className="loading-letter">e</span>
+          <span className="loading-letter">s</span>
+          <span className="loading-letter">s</span>
+          <span className="loading-letter"> </span>
+          <span className="loading-letter">s</span>
+          <span className="loading-letter">t</span>
+          <span className="loading-letter">i</span>
+          <span className="loading-letter">r</span>
+          <span className="loading-letter">s</span>
+          <span className="loading-letter">.</span>
+          <span className="loading-letter">.</span>
+          <span className="loading-letter">.</span>
+        </div>
+      </div>
+    );
   }
 
   // Improved text formatting that preserves existing paragraph breaks
@@ -60,9 +92,30 @@ function Scene({ scene, onSelectOption, onReset, encounterActive, encounterOutco
   const hasDarkness = scene.text?.toLowerCase().includes('dark') || false;
   const hasWhispers = scene.text?.toLowerCase().includes('whisper') || false;
   const hasCold = scene.text?.toLowerCase().includes('cold') || false;
+  const hasFire = scene.text?.toLowerCase().includes('fire') || scene.text?.toLowerCase().includes('flame') || false;
+  const hasWater = scene.text?.toLowerCase().includes('water') || scene.text?.toLowerCase().includes('rain') || false;
 
   return (
-    <div className={`scene ${hasBlood ? 'scene-blood' : ''} ${hasDarkness ? 'scene-dark' : ''} ${hasWhispers ? 'scene-whispers' : ''} ${hasCold ? 'scene-cold' : ''} ${encounterActive ? 'encounter-active' : ''}`}>
+    <div className={`scene 
+      ${hasBlood ? 'scene-blood' : ''} 
+      ${hasDarkness ? 'scene-dark' : ''} 
+      ${hasWhispers ? 'scene-whispers' : ''} 
+      ${hasCold ? 'scene-cold' : ''} 
+      ${hasFire ? 'scene-fire' : ''}
+      ${hasWater ? 'scene-water' : ''}
+      ${encounterActive ? 'encounter-active' : ''}
+      ${typingEffect ? 'typing-effect' : 'no-typing-effect'}
+    `}>
+      <div className="scene-controls">
+        <button 
+          className="scene-control-button" 
+          onClick={handleToggleTypingEffect}
+          title={typingEffect ? "Disable typing effect" : "Enable typing effect"}
+        >
+          {typingEffect ? "⏩" : "⏯️"}
+        </button>
+      </div>
+      
       <div className={`scene-text ${isTextVisible ? 'visible' : ''}`}>
         {formattedText.split('\n\n').map((paragraph, i) => (
           <p key={i} className={`paragraph ${isTextVisible ? 'visible' : ''}`} style={{ '--delay': `${i * 0.2}s` }}>
@@ -87,7 +140,9 @@ function Scene({ scene, onSelectOption, onReset, encounterActive, encounterOutco
         </div>
       )}
       
-      <div className="decorative-divider"></div>
+      <div className="decorative-divider">
+        <span className="divider-ornament">✧</span>
+      </div>
       
       <div className={`options ${isOptionsVisible ? 'visible' : ''} ${encounterActive ? 'encounter-options' : ''}`}>
         {scene.options && scene.options.length > 0 ? (
